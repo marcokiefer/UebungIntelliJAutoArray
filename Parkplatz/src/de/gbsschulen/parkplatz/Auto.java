@@ -1,6 +1,4 @@
-package de.gbsschulen.autos;
-
-import java.util.Objects;
+package de.gbsschulen.parkplatz;
 
 public class Auto {
     private String kennzeichen;
@@ -30,23 +28,8 @@ public class Auto {
     public void setPs(int ps) {
         this.ps = ps;
     }
-
     public void druckeInfo(){
         System.out.println(kennzeichen);
-    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Auto auto = (Auto) o;
-        return ps == auto.ps &&
-                Objects.equals(kennzeichen, auto.kennzeichen);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(kennzeichen, ps);
     }
 }
